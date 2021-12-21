@@ -38,7 +38,60 @@ window.addEventListener('scroll', scrollHeader)
 
 
 /*=============== SWIPER DISCOVER ===============*/
+var swiper = new Swiper(".discover__container", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    coverflowEffect: {
+        rotate: 50,
 
+    },
+
+});
 
 
 /*=============== VIDEO ===============*/
+const videoFile = document.getElementById('video-file'),
+    videoButton = document.getElementById('video-button'),
+    videoIcon = document.getElementById('video-icon')
+
+function playPause() {
+    if (videoFile.paused) {
+        //play video
+        videoFile.play()
+
+        //we change the icon
+        videoIcon.classList.add('ri-pause-line')
+        videoIcon.classList.remove('ri-play-line')
+    } else {
+        //pause video
+        videoFile.pause()
+
+        //we change the icon
+        videoIcon.classList.remove('ri-pause-line')
+        videoIcon.classList.add('ri-play-line')
+    }
+}
+
+videoButton.addEventListener('click', playPause)
+
+function finalVideo() {
+    //video ends, icon change
+    videoIcon.classList.remove('ri-pause-line')
+    videoIcon.classList.add('ri-play-line')
+}
+//ended, whe the video ends
+videoFile.addEventListener('ended', finalVideo)
+
+/*=============== SHOW SCROLL UP ===============*/
+
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+
+
+/*=============== DARK LIGHT THEME ===============*/
