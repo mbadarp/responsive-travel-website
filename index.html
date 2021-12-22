@@ -7,6 +7,9 @@
 
     <link rel="shortcut icon" href="" type="image/png">
 
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -27,7 +30,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">Home</a>
+                        <a href="#home" class="nav__link active-link">Home</a>
                     </li>
                     <li class="nav__item">
                         <a href="#about" class="nav__link">About</a>
@@ -39,6 +42,12 @@
                         <a href="#place" class="nav__link">Place</a>
                     </li>
                 </ul>
+
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
 
                 <i class="ri-close-line nav__close" id="nav-close"></i>
             </div>
@@ -160,7 +169,7 @@
         </section>
 
         <!--==================== EXPERIENCE ====================-->
-        <section class="experience section" id="experience">
+        <section class="experience section">
             <h2 class="section__title">With Our Experience <br> We Will Serve You</h2>
 
             <div class="experience__container container grid">
@@ -455,10 +464,12 @@
     </footer>
 
     <!--========== SCROLL UP ==========-->
-
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
 
     <!--=============== SCROLL REVEAL===============-->
-    <script src=""></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
 
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
